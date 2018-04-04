@@ -1,0 +1,25 @@
+[package]
+authors = ["Casey Primozic <me@ameo.link>"]
+name = "rocket-mem-leak"
+version = "0.1.0"
+
+[profile.release]
+opt-level = 3
+debug = true
+debug-assertions = false
+
+[dependencies]
+csv = "1.0.0-beta.5"
+# serde = "1.0.37"
+
+[dependencies.rocket]
+git = "https://github.com/SergioBenitez/Rocket"
+rev = "29d56900c6d7d8465a8736db1640e570305820c5"
+
+[dependencies.rocket_codegen]
+git = "https://github.com/SergioBenitez/Rocket"
+rev = "29d56900c6d7d8465a8736db1640e570305820c5"
+
+[dependencies.rocket_contrib]
+git = "https://github.com/SergioBenitez/Rocket"
+rev = "29d56900c6d7d8465a8736db1640e570305820c5"
