@@ -6,7 +6,6 @@ use std::thread;
 use std::time::Duration;
 
 // extern crate alloc_system;
-extern crate csv;
 extern crate rocket;
 
 use rocket::http::Status;
@@ -22,16 +21,16 @@ fn index(x: usize) -> Result<String, String> {
 }
 
 fn main() {
-    // rocket::ignite().mount("/", routes![index]).launch();
+    rocket::ignite().mount("/", routes![index]).launch();
 
-    let rocket = rocket::ignite();
-    let client = Client::new(rocket).expect("valid rocket");
+    // let rocket = rocket::ignite().mount("/", routes![index]);
+    // let client = Client::new(rocket).expect("valid rocket");
 
-    loop {
-        println!("Making 25MB request...");
-        let res = client.get("/25000000").dispatch();
-        assert_eq!(res.status(), Status::Ok);
+    // loop {
+    //     println!("Making 25MB request...");
+    //     let res = client.get("/25000000").dispatch();
+    //     assert_eq!(res.status(), Status::Ok);
 
-        thread::sleep(Duration::from_secs(1));
-    }
+    //     thread::sleep(Duration::from_secs(1));
+    // }
 }

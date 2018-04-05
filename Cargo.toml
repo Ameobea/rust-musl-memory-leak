@@ -10,17 +10,18 @@ debug-assertions = false
 
 
 [dependencies]
-# csv = "1.0.0-beta.5"
-# serde = "1.0.37"
+rocket = "0.3.7"
+rocket_codegen = "0.3.7"
+rocket_contrib = "0.3.7"
 
-[dependencies.rocket]
-git = "https://github.com/SergioBenitez/Rocket"
-rev = "29d56900c6d7d8465a8736db1640e570305820c5"
+# [dependencies.rocket]
+# git = "https://github.com/SergioBenitez/Rocket"
+# rev = "0dfde3b0b911f1a556d0623b35c38091544c2568"
 
-[dependencies.rocket_codegen]
-git = "https://github.com/SergioBenitez/Rocket"
-rev = "29d56900c6d7d8465a8736db1640e570305820c5"
+# [dependencies.rocket_codegen]
+# git = "https://github.com/SergioBenitez/Rocket"
+# rev = "0dfde3b0b911f1a556d0623b35c38091544c2568"
 
-[dependencies.rocket_contrib]
-git = "https://github.com/SergioBenitez/Rocket"
-rev = "29d56900c6d7d8465a8736db1640e570305820c5"
+# [dependencies.rocket_contrib]
+# git = "https://github.com/SergioBenitez/Rocket"
+# rev = "0dfde3b0b911f1a556d0623b35c38091544c2568"
