@@ -8,8 +8,9 @@ opt-level = 3
 debug = true
 debug-assertions = false
 
+
 [dependencies]
-csv = "1.0.0-beta.5"
+# csv = "1.0.0-beta.5"
 # serde = "1.0.37"
 
 [dependencies.rocket]
