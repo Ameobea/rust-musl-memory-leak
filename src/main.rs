@@ -1,15 +1,20 @@
 #![feature(decl_macro, plugin)]
-// #![feature(alloc_system)]
+#![feature(alloc_system, global_allocator, allocator_api)]
 #![plugin(rocket_codegen)]
 
 use std::thread;
 use std::time::Duration;
 
-// extern crate alloc_system;
+extern crate alloc_system;
 extern crate rocket;
 
 use rocket::http::Status;
 use rocket::local::Client;
+
+use std::heap::System;
+
+#[global_allocator]
+static ALLOCATOR: System = System;
 
 fn get_big_string(x: usize) -> String {
     String::from_utf8(vec!['a' as u8; x]).unwrap()
